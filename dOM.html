@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Attribute Example</title>
+</head>
+<body>
+
+    <img id="myImage" src="image.jpg" alt="Sample Image">
+
+    <script>
+        // Accessing and modifying attributes
+        const imageElement = document.getElementById('myImage');
+
+        // Get the value of the 'src' attribute
+        const sourceAttribute = imageElement.getAttribute('src');
+        console.log('Source attribute:', sourceAttribute);
+
+        // Set a new value for the 'alt' attribute
+        imageElement.setAttribute('alt', 'Updated Image Alt Text');
+
+        // Add a new attribute
+        imageElement.setAttribute('data-custom', 'Custom Data Attribute');
+
+        // Remove an attribute
+        imageElement.removeAttribute('src');
+
+        // Display the updated attributes
+        console.log('Updated Alt attribute:', imageElement.getAttribute('alt'));
+        console.log('Custom Data attribute:', imageElement.getAttribute('data-custom'));
+    </script>
+
+</body>
+</html>
+
+
+
+

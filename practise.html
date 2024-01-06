@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <form id="form">
+        fname: <input type="text" placeholder="fname" value="David" id="fname"/><br>
+        lastname: <input type="text" placeholder="lname" value="Miller" id="lname"/>
+        <input type="submit" value="Submit">
+    </form>
+        <script>
+            function form(){
+                let first = document.getElementById('fname').value;
+                let second = document.getElementById('lname').value;
+                console.log('first:', first)
+                console.log('second:', second)
+
+                alert(`fname: ${first} lastname: ${second}`)
+            }
+
+            document.getElementById('form').addEventListener('submit', function(){
+                event.preventDefault()
+                form()
+            })
+            
+        </script>
+  </body>
+</html>

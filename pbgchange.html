@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg change</title>
+</head>
+<body>
+    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam aut dolorem eum consequatur perspiciatis, ab eaque praesentium tenetur debitis reiciendis! Quo veritatis totam commodi, voluptatum blanditiis corporis voluptatem reprehenderit. Harum.</p>
+
+    <button id="btn" >Change in para</button>
+
+    <script>
+        let result = document.getElementsByClassName('paragraph')[0]
+        let btn = document.getElementById("btn")
+        let toggle = false;
+        btn.addEventListener('click', function change(){
+            if(toggle){
+                result.style.backgroundColor = ''
+            result.style.color = ''
+            result.style.padding = ''
+            }else{
+                result.style.backgroundColor = 'black'
+            result.style.color = 'white'
+            result.style.padding = '5px'
+            }
+            toggle = !toggle
+        })
+    </script>
+    
+</body>
+</html>
